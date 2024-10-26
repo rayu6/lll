@@ -1,0 +1,223 @@
+{% extends 'layouts/base.html' %} {% load static %} {% block content %}
+<div class="container-fluid py-4 px-5">
+  <div class="row">
+    <div class="col-12">
+      <h3 >Remuneraciones</h3>
+      <hr>
+      <br>
+      <div class="card border shadow-xs mb-4">
+        <div class="card-header border-bottom pb-0">
+          <div class="d-sm-flex align-items-center mb-3">
+            <div>
+              <h6 class="font-weight-semibold text-lg mb-0">Departamentos</h6>
+              <p class="text-sm mb-sm-0">Listado de departamentos.</p>
+            </div>
+            <div class="ms-auto d-flex flex-md-row flex-column">
+              <div class="input-group input-group-sm ms-auto me-2">
+                <span class="input-group-text text-body">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                  </svg>
+                </span>
+                <input type="text" class="form-control form-control-sm" placeholder="Buscar">
+              </div>
+              <a data-bs-toggle="modal" data-bs-target="#" type="button"  class="btn btn-sm btn-dark btn-icon d-flex align-items-center mb-0 me-2">
+                <span class="btn-inner--icon">
+         
+                </span>
+                <span class="btn-inner--text">Libro Remuneraciones</span>
+              </a>
+              <a data-bs-toggle="modal" data-bs-target="#" type="button"  class="btn btn-sm btn-dark btn-icon d-flex align-items-center mb-0 me-2">
+                <span class="btn-inner--icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill d-block me-2" viewBox="0 0 512 512">
+                    <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                  </svg>
+                </span>
+                <span class="btn-inner--text">Exportar</span>
+              </a>
+              <a data-bs-toggle="modal" data-bs-target="#" type="button"  class="btn btn-sm btn-dark btn-icon d-flex align-items-center mb-0 me-2">
+                <span class="btn-inner--icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill d-block me-2" viewBox="0 0 512 512">
+                    <path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                  </svg>
+                </span>
+                <span class="btn-inner--text">Imprimir</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body px-0 py-0">
+          <div class="table-responsive p-0">
+            <table class="table align-items-center  table-bordered table-hover justify-content-center mb-0">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="text-secondary text-xs font-weight-semibold opacity-7">ID</th>
+                  <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Nombre Departamento</th>
+                  <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Contratos Activos</th>
+                  <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Total Remuneraciones</th>
+                  <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Acceder</th>
+                </tr>
+              </thead>
+              <tbody> 
+                <tr>
+                  <td>
+                    <div class="d-flex px-2">
+                      <div class="my-auto">
+                        <span class="mb-0 text-sm">0001</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="my-auto">
+                      <h6 class="mb-0 text-sm">Producción</h6>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="text-sm font-weight-normal">205</span>
+                  </td>
+                  <td>
+                    <span class="text-sm font-weight-normal">$1.251.201</span>
+                  </td>
+                  <td class="align-middle">
+                    <div class="d-flex justify-content-center px-4">
+                    <a href="{% url 'r_produccion' %}" class="btn btn-sm btn-dark">
+                        Acceder
+                    </a>
+                </div>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                      <div class="d-flex px-2">
+                        <div class="my-auto">
+                          <span class="mb-0 text-sm">0002</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-auto">
+                        <h6 class="mb-0 text-sm">Recursos humanos</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">285</span>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">$2.251.201</span>
+                    </td>
+                    <td class="align-middle">
+                        <div class="d-flex justify-content-center px-4">
+                        <a href="{% url 'r_rrhh' %}" class="btn btn-sm btn-dark">
+                            Acceder
+                        </a>
+                    </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2">
+                        <div class="my-auto">
+                          <span class="mb-0 text-sm">0003</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-auto">
+                        <h6 class="mb-0 text-sm">Finanzas</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">205</span>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">$3.123.212</span>
+                    </td>
+                    <td class="align-middle">
+                        <div class="d-flex justify-content-center px-4">
+                        <a href="{% url 'r_finanzas' %}" class="btn btn-sm btn-dark">
+                            Acceder
+                        </a>
+                    </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2">
+                        <div class="my-auto">
+                          <span class="mb-0 text-sm">0004</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-auto">
+                        <h6 class="mb-0 text-sm">Administración</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">37</span>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">$800.200</span>
+                    </td>
+                    <td class="align-middle">
+                        <div class="d-flex justify-content-center px-4">
+                        <a href="{% url 'r_admin' %}" class="btn btn-sm btn-dark">
+                            Acceder
+                        </a>
+                    </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2">
+                        <div class="my-auto">
+                          <span class="mb-0 text-sm">0005</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="my-auto">
+                        <h6 class="mb-0 text-sm">CRM y Ventas</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">421</span>
+                    </td>
+                    <td>
+                      <span class="text-sm font-weight-normal">$2.650.201</span>
+                    </td>
+                    <td class="align-middle">
+                        <div class="d-flex justify-content-center px-4">
+                        <a href="{% url 'r_crm' %}" class="btn btn-sm btn-dark">
+                            Acceder
+                        </a>
+                    </div>
+                      </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="border-top py-3 px-3 d-flex align-items-center">
+            <button class="btn btn-sm btn-white d-sm-block d-none mb-0">Anterior</button>
+            <nav aria-label="..." class="ms-auto">
+              <ul class="pagination pagination-light mb-0">
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link font-weight-bold">1</span>
+                </li>
+                <li class="page-item"><a class="page-link border-0 font-weight-bold" href="javascript:;">2</a></li>
+                <li class="page-item"><a class="page-link border-0 font-weight-bold d-sm-inline-flex d-none" href="javascript:;">3</a></li>
+                <li class="page-item"><a class="page-link border-0 font-weight-bold" href="javascript:;">...</a></li>
+                <li class="page-item"><a class="page-link border-0 font-weight-bold d-sm-inline-flex d-none" href="javascript:;">8</a></li>
+                <li class="page-item"><a class="page-link border-0 font-weight-bold" href="javascript:;">9</a></li>
+                <li class="page-item"><a class="page-link border-0 font-weight-bold" href="javascript:;">10</a></li>
+              </ul>
+            </nav>
+            <button class="btn btn-sm btn-white d-sm-block d-none mb-0 ms-auto">Siguiente</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'includes/footer.html' %}
+</div>
+{% endblock content %}
